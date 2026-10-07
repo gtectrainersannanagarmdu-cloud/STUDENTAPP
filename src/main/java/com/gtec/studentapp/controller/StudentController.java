@@ -28,7 +28,15 @@ public class StudentController {
 
                 <head>
 
-                    <title>Student Management System</title>
+                    <title>Student Management System | StudentApp</title>
+
+                    <meta name="description"
+                          content="Student Management System for managing student records, courses, and academic information.">
+
+                    <meta name="robots" content="index, follow">
+
+                    <meta name="keywords"
+                          content="student management system, student management, student records, college management system">
 
                     <style>
 
@@ -248,6 +256,29 @@ public class StudentController {
 
                 </html>
                 """;
+    }
+
+
+    // =========================================================
+    // MAIN HOME PAGE
+    // =========================================================
+
+    @GetMapping(value = "/", produces = "text/html")
+    public String mainHome() {
+        return home();
+    }
+
+
+    // =========================================================
+    // GOOGLE SEARCH CONSOLE VERIFICATION
+    // =========================================================
+
+    @GetMapping(
+            value = "/googlee359cfa7c46770c8.html",
+            produces = "text/html"
+    )
+    public String googleVerification() {
+        return "google-site-verification: googlee359cfa7c46770c8.html";
     }
 
 
